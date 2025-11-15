@@ -1,4 +1,7 @@
 export default function CV() {
+  // Calcular años de experiencia desde 1998
+  const yearsSinceStart = new Date().getFullYear() - 1998
+
   return (
     <div className="min-h-screen bg-white text-black">
       {/* Hero / Header */}
@@ -10,7 +13,6 @@ export default function CV() {
             <a href="mailto:cale2332@yahoo.com" className="hover:text-blue-200 transition-colors">
               📧 cale2332@yahoo.com
             </a>
-            <span>📍 Lago Iseo, Ciudad de México, México</span>
             <a href="tel:5573391658" className="hover:text-blue-200 transition-colors">
               📞 55 73 39 16 58
             </a>
@@ -23,7 +25,7 @@ export default function CV() {
         <section className="mb-16">
           <h2 className="text-3xl font-bold mb-6 border-b-2 border-black pb-2">Resumen Profesional</h2>
           <p className="text-lg text-gray-700 leading-relaxed">
-            Senior Full Stack Developer con <strong>25 años de experiencia</strong> liderando el desarrollo 
+            Senior Full Stack Developer con <strong>{yearsSinceStart} años de experiencia</strong> liderando el desarrollo 
             de soluciones empresariales en sectores críticos como <strong>banca, salud, construcción y logística</strong>. 
             Especializado en arquitecturas <strong>.NET/C#, Angular</strong> y tecnologías cloud, con 
             experiencia comprobada liderando equipos técnicos y entregando proyectos complejos 
@@ -39,7 +41,7 @@ export default function CV() {
             <div className="border-l-4 border-blue-600 pl-6">
               <h3 className="text-xl font-bold">Senior Full Stack</h3>
               <p className="text-lg text-blue-600 font-semibold">Cemex - Neoris</p>
-              <p className="text-gray-600 mb-3">October 2020 — April 2025 | Ciudad de México - Remoto</p>
+              <p className="text-gray-600 mb-3">October 2020 — April 2025 | Monterrey - Remoto</p>
               <p className="text-gray-700 leading-relaxed mb-3">
                 <strong>RMX – USA:</strong> Modificación de componentes de Angular, planeación de camiones, órdenes.
               </p>
@@ -183,11 +185,11 @@ export default function CV() {
                 <li>• .NET Framework 1 a 4.5</li>
                 <li>• Angular (2-19)</li>
                 <li>• React</li>
-                <li>• Vue</li>
+                <li>• Vue.js</li>
                 <li>• Ionic</li>
                 <li>• React Native</li>
                 <li>• jQuery</li>
-                <li>• JavaScript</li>
+                <li>• JavaScript / TypeScript</li>
               </ul>
             </div>
 

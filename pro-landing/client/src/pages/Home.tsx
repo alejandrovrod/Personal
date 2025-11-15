@@ -1,4 +1,7 @@
 export default function Home() {
+  // Calcular años de experiencia desde 1998
+  const yearsSinceStart = new Date().getFullYear() - 1998
+
   return (
     <div className="min-h-screen bg-white text-black">
       {/* Hero */}
@@ -10,7 +13,7 @@ export default function Home() {
           Senior Full Stack Developer
         </h2>
         <p className="text-xl md:text-2xl text-gray-600 max-w-4xl leading-relaxed">
-          25 años desarrollando soluciones empresariales críticas para <strong>banca</strong>, 
+          {yearsSinceStart} años desarrollando soluciones empresariales críticas para <strong>banca</strong>, 
           <strong> salud</strong>, <strong>construcción</strong> y <strong>logística</strong>. 
           Especializado en arquitecturas <strong>.NET</strong>, <strong>Angular</strong>, 
           <strong>React</strong> y tecnologías cloud.
@@ -135,8 +138,31 @@ export default function Home() {
               </div>
               <div>
                 <p className="font-semibold text-lg">Microservicios Java</p>
-                <p className="text-gray-600 text-sm">Usado en Santander para apps bancarias críticas</p>
+                <p className="text-gray-600 text-sm">IntelliJ IDEA, arquitecturas distribuidas</p>
               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* AI & Herramientas Modernas */}
+        <div className="p-8 bg-gradient-to-br from-green-50 to-white border-2 border-green-200 mb-12">
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 bg-green-600 text-white rounded-lg flex items-center justify-center font-bold text-xl">
+              AI
+            </div>
+            <h3 className="text-2xl font-bold">Desarrollo Asistido por IA</h3>
+          </div>
+          <div className="space-y-3">
+            <div>
+              <p className="font-semibold text-lg flex items-center gap-2">
+                Cursor AI Editor 
+                <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">Actualmente</span>
+              </p>
+              <p className="text-gray-600 text-sm">Desarrollo acelerado con AI pair programming, autocompletado inteligente y generación de código contextual</p>
+            </div>
+            <div>
+              <p className="font-semibold text-lg">Modelos de IA</p>
+              <p className="text-gray-600 text-sm">Claude, GPT-4, Copilot para optimización de código, arquitectura y resolución de problemas complejos</p>
             </div>
           </div>
         </div>
@@ -175,10 +201,10 @@ export default function Home() {
               Herramientas
             </h4>
             <ul className="text-gray-700 space-y-1 text-sm">
+              <li>• Cursor AI Editor</li>
               <li>• Visual Studio 2022</li>
               <li>• VS Code</li>
               <li>• IntelliJ IDEA</li>
-              <li>• Azure DevOps</li>
             </ul>
           </div>
         </div>
@@ -193,7 +219,7 @@ export default function Home() {
             <div className="bg-white p-8 border-l-4 border-blue-600 hover:shadow-lg transition-shadow">
               <div className="flex items-start justify-between mb-4">
                 <div>
-                  <h3 className="text-2xl font-bold">RMX & ARKIK - Cemex</h3>
+                  <h3 className="text-2xl font-bold">RMS & ARKIK - Cemex</h3>
                   <p className="text-gray-600">Neoris | 2020-2025</p>
                 </div>
                 <span className="px-3 py-1 bg-blue-100 text-blue-700 text-sm font-semibold rounded">Angular</span>
@@ -277,29 +303,82 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certificaciones Recientes */}
+      {/* Cursos Recientes y Próximos */}
       <section className="max-w-6xl mx-auto px-6 py-20">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12">Certificaciones Recientes</h2>
-        <div className="grid md:grid-cols-4 gap-6">
-          <div className="p-6 bg-blue-50 border-2 border-blue-200">
-            <p className="text-3xl mb-2">📜</p>
-            <h3 className="font-bold text-lg">Angular 19</h3>
-            <p className="text-sm text-gray-600">UDEMY • Mar-Abr 2025</p>
+        <h2 className="text-4xl md:text-5xl font-bold mb-4">Aprendizaje Continuo</h2>
+        <p className="text-lg text-gray-600 mb-12">Manteniéndome actualizado con las últimas tecnologías</p>
+        
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Cursos Recientes */}
+          <div>
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <span className="text-3xl">✅</span>
+              Cursos Recientes
+            </h3>
+            <div className="space-y-4">
+              <div className="p-6 bg-blue-50 border-2 border-blue-200">
+                <div className="flex items-start justify-between mb-2">
+                  <h4 className="font-bold text-lg">Angular 19</h4>
+                  <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">2025</span>
+                </div>
+                <p className="text-sm text-gray-600">UDEMY • Mar-Abr 2025</p>
+              </div>
+              <div className="p-6 bg-purple-50 border-2 border-purple-200">
+                <div className="flex items-start justify-between mb-2">
+                  <h4 className="font-bold text-lg">.NET Aspire</h4>
+                  <span className="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded">2025</span>
+                </div>
+                <p className="text-sm text-gray-600">UDEMY • Abr 2025</p>
+              </div>
+              <div className="p-6 bg-green-50 border-2 border-green-200">
+                <h4 className="font-bold text-lg">Microservicios .NET</h4>
+                <p className="text-sm text-gray-600">LinkedIn Learning • Ago 2019</p>
+              </div>
+              <div className="p-6 bg-orange-50 border-2 border-orange-200">
+                <h4 className="font-bold text-lg">Ionic + Python & Django</h4>
+                <p className="text-sm text-gray-600">Udemy • 2018-2019</p>
+              </div>
+            </div>
           </div>
-          <div className="p-6 bg-purple-50 border-2 border-purple-200">
-            <p className="text-3xl mb-2">☁️</p>
-            <h3 className="font-bold text-lg">.NET Aspire</h3>
-            <p className="text-sm text-gray-600">UDEMY • Abr 2025</p>
-          </div>
-          <div className="p-6 bg-green-50 border-2 border-green-200">
-            <p className="text-3xl mb-2">🔧</p>
-            <h3 className="font-bold text-lg">Microservicios .NET</h3>
-            <p className="text-sm text-gray-600">LinkedIn • Ago 2019</p>
-          </div>
-          <div className="p-6 bg-orange-50 border-2 border-orange-200">
-            <p className="text-3xl mb-2">📱</p>
-            <h3 className="font-bold text-lg">Ionic</h3>
-            <p className="text-sm text-gray-600">Udemy • Ago 2018</p>
+
+          {/* Próximas Metas */}
+          <div>
+            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
+              <span className="text-3xl">🎯</span>
+              Próximas Metas
+            </h3>
+            <div className="space-y-4">
+              <div className="p-6 bg-gradient-to-br from-emerald-50 to-white border-2 border-emerald-300 hover:border-emerald-500 transition-colors">
+                <div className="flex items-start justify-between mb-3">
+                  <h4 className="font-bold text-xl">Spring Boot</h4>
+                  <span className="text-2xl">🍃</span>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Profundizar en microservicios Java con Spring Boot, Spring Cloud y arquitecturas reactivas. 
+                  Complementar experiencia actual en microservicios.
+                </p>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-yellow-50 to-white border-2 border-yellow-300 hover:border-yellow-500 transition-colors">
+                <div className="flex items-start justify-between mb-3">
+                  <h4 className="font-bold text-xl">Python</h4>
+                  <span className="text-2xl">🐍</span>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  Expandir conocimientos en Python para desarrollo backend con FastAPI, automatización 
+                  y scripting. Integrar con ecosistema .NET existente.
+                </p>
+              </div>
+              <div className="p-6 bg-gradient-to-br from-indigo-50 to-white border-2 border-indigo-300">
+                <div className="flex items-start justify-between mb-3">
+                  <h4 className="font-bold text-xl">IA para Desarrollo</h4>
+                  <span className="text-2xl">🤖</span>
+                </div>
+                <p className="text-gray-700 leading-relaxed">
+                  LangChain, LangFlow, integración de modelos de lenguaje (GPT, Claude, Ollama) y agentes inteligentes 
+                  para automatización y asistencia en aplicaciones empresariales.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -311,7 +390,7 @@ export default function Home() {
             ¿Necesitas un desarrollador senior?
           </h2>
           <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto">
-            25 años de experiencia en proyectos críticos. Disponible para proyectos fullstack, 
+            {yearsSinceStart} años de experiencia en proyectos críticos. Disponible para proyectos fullstack, 
             liderazgo técnico y arquitectura de soluciones empresariales.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-lg">
@@ -322,7 +401,7 @@ export default function Home() {
               href="tel:5573391658" 
               className="hover:text-gray-300 transition-colors"
             >
-              📞 55 73 39 16 58
+              📞 Teléfono disponible
             </a>
             <a 
               href="/cv"
